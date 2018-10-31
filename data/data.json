@@ -1,0 +1,13 @@
+{
+    "user": {
+        "firstName": "Test1",
+        "lastName": "Test1LastName",
+        "dob": "2000-01-01",
+        "bloodType": "O",
+        "astroSunSign": "Capricorn",
+        "astroMoonSign": null,
+        "astroRisingSign": null,
+        "zodiacSign": "RAT",
+        "zodiacElement": "Fire"
+    }
+}
