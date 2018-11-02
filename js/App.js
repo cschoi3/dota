@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import Info from './Info'
 
 const API_URL = 'https://express-mongodb-setup-fhxlfgmjuv.now.sh';
 class App extends Component {
+  
   constructor(props) {
     super(props);
     this.state = {
@@ -29,7 +31,9 @@ class App extends Component {
   }
 
   render() {
-    return <h1>Hello World</h1>;
+    return (
+      <Info data={this.state}/>
+    );
   }
 }
 
