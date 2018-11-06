@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import Info from './Info'
-import Basic from './Onboarding'
+import Onboarding from './Onboarding'
+import { API_URL } from './config'
 
-const API_URL = 'https://express-mongodb-setup-fhxlfgmjuv.now.sh';
 class App extends Component {
   
   constructor(props) {
@@ -34,7 +34,7 @@ class App extends Component {
   render() {
     return (
       // <Info data={this.state}/>
-      <Basic/>
+      <Onboarding/>
     );
   }
 }
