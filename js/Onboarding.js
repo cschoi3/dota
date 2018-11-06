@@ -1,8 +1,10 @@
 // Render Prop
 import React from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
+import axios from 'axios';
+import { API_URL } from './config'
 
-const Basic = () => (
+const Onboarding = () => (
   <div>
     <h1>Any place in your app!</h1>
     <Formik
@@ -19,10 +21,17 @@ const Basic = () => (
         return errors;
       }}
       onSubmit={(values, { setSubmitting }) => {
-        setTimeout(() => {
-          alert(JSON.stringify(values, null, 2));
-          setSubmitting(false);
-        }, 400);
+        // setTimeout(() => {
+        //   alert(JSON.stringify(values, null, 2));
+        //   setSubmitting(false);
+        // }, 400);
+        axios.post(`${API_URL}/user`, values)
+          .then(data => {
+            console.log(data)
+            setSubmitting(false);
+          })
+          .catch(err => console.error(err))
+        
       }}
     >
       {({ isSubmitting }) => (
@@ -68,4 +77,4 @@ const Basic = () => (
   </div>
 );
 
-export default Basic;
+export default Onboarding;
